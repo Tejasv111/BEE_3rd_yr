@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1",
+    "name": "Tejasv",
+    "username": "t123",
+    "role": "admin"
+  },
+  {
+    "id": "2",
+    "name": "sona",
+    "username": "s45",
+    "role": "editor"
+  },
+  {
+    "id": "5",
+    "name": "Tejasv Mahant",
+    "username": "Tejaa",
+    "role": "user"
+  }
+]
