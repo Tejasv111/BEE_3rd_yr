@@ -1,0 +1,50 @@
+[
+  {
+    "id": "1",
+    "name": "Tejasv",
+    "username": "t123",
+    "role": "admin"
+  },
+  {
+    "id": "2",
+    "name": "sona",
+    "username": "s45",
+    "role": "editor"
+  },
+  {
+    "id": "5",
+    "name": "Tejasv Mahant",
+    "username": "Tejaa",
+    "role": "user"
+  },
+  {
+    "id": "7",
+    "name": "Sushobhit",
+    "username": "Su",
+    "role": "user"
+  },
+  {
+    "id": "8",
+    "name": "kbheovn",
+    "username": "skjvndjn",
+    "role": "arch"
+  },
+  {
+    "id": "8",
+    "name": "kbheovn",
+    "username": "skjvndjn",
+    "role": "arch"
+  },
+  {
+    "id": "9",
+    "name": "kbheovn",
+    "username": "skjvndjn",
+    "role": "arch"
+  },
+  {
+    "id": "88",
+    "name": "tej",
+    "username": "tejjjjjj",
+    "role": "user"
+  }
+]
