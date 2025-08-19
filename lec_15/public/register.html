@@ -1,0 +1,100 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Registration</title>
+</head>
+<body>
+  <form action="/adduser" method="post">
+    <input type="text" name="id" placeholder="Enter ID" required />
+    <input type="text" name="name" placeholder="Enter Name" required />
+    <input type="text" name="username" placeholder="Enter Username" required />
+    <input type="text" name="role" placeholder="Enter Role" required />
+    <button type="submit">Add User</button>
+  </form>
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- public/register.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register</title>
+</head>
+<body>
+  <h2>Register New User</h2>
+  <form id="registerForm">
+    <input type="text" id="id" placeholder="ID" required /><br><br>
+    <input type="text" id="name" placeholder="Name" required /><br><br>
+    <input type="text" id="username" placeholder="Username" required /><br><br>
+    <input type="text" id="role" placeholder="Role" required /><br><br>
+    <button type="submit">Register</button>
+  </form>
+
+  <script>
+    const form = document.getElementById("registerForm");
+    const idInput = document.getElementById("id");
+    const nameInput = document.getElementById("name");
+    const userNameInput = document.getElementById("username");
+    const roleInput = document.getElementById("role");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const userData = {
+        id: idInput.value,
+        name: nameInput.value,
+        username: userNameInput.value,
+        role: roleInput.value
+      };
+
+      fetch("/adduser", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(userData)
+      })
+        .then(response => {
+          if (!response.ok) {
+            return response.text().then(err => {
+              throw new Error(err);
+            });
+          }
+          return response.text();
+        })
+        .then((data) => {
+          alert("User registration successful!");
+          idInput.value = "";
+          nameInput.value = "";
+          userNameInput.value = "";
+          roleInput.value = "";
+        })
+        .catch((err) => {
+          alert("Error: " + err.message);
+          idInput.value = "";
+          nameInput.value = "";
+          userNameInput.value = "";
+          roleInput.value = "";
+        });
+    });
+  </script>
+</body>
+</html>
