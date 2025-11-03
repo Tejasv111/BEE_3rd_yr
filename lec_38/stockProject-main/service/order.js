@@ -96,7 +96,7 @@ console.log(BTCUSDOrderBook.bids);class OrderBook{
     }
     _genOrderId(){
         return this._nextId++;
-    }
+    }7
     _sort(sides){
         if(sides=="BUY"){
             this.bids.sort((a,b)=>{
@@ -185,7 +185,7 @@ BTCUSDOrderBook.bids.push(
     {orderId:2,side:"BUY",type:"MARKET",
     price:100,quantity:10,timestamp:Date.now(),user:"Mehak"
 })
-xx4444gqqww
+
     
 BTCUSDOrderBook.bids.push(
     {orderId:2,side:"BUY",type:"MARKET",
